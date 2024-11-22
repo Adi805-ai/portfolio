@@ -1,0 +1,167 @@
+import React from 'react';
+import { Github, Linkedin, Mail, ExternalLink, BookOpen, Code, Brain, Award } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const Portfolio = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Jane Smith</h1>
+          <p className="text-xl mb-6">AI/ML Engineer | Data Scientist</p>
+          <div className="flex space-x-4">
+            <a href="#" className="hover:text-blue-200"><Github className="w-6 h-6" /></a>
+            <a href="#" className="hover:text-blue-200"><Linkedin className="w-6 h-6" /></a>
+            <a href="#" className="hover:text-blue-200"><Mail className="w-6 h-6" /></a>
+          </div>
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-12">
+        {/* About Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6">About Me</h2>
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-gray-600">
+                I'm a Master's student in Machine Learning with a passion for developing AI solutions 
+                that solve real-world problems. My research focuses on deep learning and computer vision, 
+                with particular interest in transformers and attention mechanisms.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Skills Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6">Technical Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Code className="w-5 h-5 mr-2" />
+                  Programming
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5">
+                  <li>Python</li>
+                  <li>PyTorch</li>
+                  <li>TensorFlow</li>
+                  <li>SQL</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Brain className="w-5 h-5 mr-2" />
+                  ML/AI
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5">
+                  <li>Deep Learning</li>
+                  <li>Computer Vision</li>
+                  <li>NLP</li>
+                  <li>Transformers</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Tools
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5">
+                  <li>Git</li>
+                  <li>Docker</li>
+                  <li>AWS</li>
+                  <li>MLflow</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Computer Vision for Medical Diagnosis</CardTitle>
+                <CardDescription>Deep Learning | PyTorch | Medical Imaging</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Developed a CNN-based model for early detection of medical conditions from X-ray images. 
+                  Achieved 94% accuracy on test dataset.
+                </p>
+                <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center">
+                  View Project <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>NLP-Powered Customer Service Bot</CardTitle>
+                <CardDescription>NLP | Transformers | FastAPI</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Built an intelligent chatbot using BERT for intent classification and response generation. 
+                  Reduced customer service response time by 60%.
+                </p>
+                <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center">
+                  View Project <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6">Education</h2>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                Academic Background
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold">Master of Science in Machine Learning</h3>
+                  <p className="text-gray-600">Stanford University | 2023 - Present</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Bachelor of Science in Computer Science</h3>
+                  <p className="text-gray-600">MIT | 2019 - 2023</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p>© 2024 Jane Smith. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
